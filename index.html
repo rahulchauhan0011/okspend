@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OkSpend — Spend with confidence</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:     #1a1a2e;
+    --cream:   #faf8f4;
+    --warm:    #f0ebe1;
+    --accent:  #2d6a4f;
+    --accent2: #52b788;
+    --muted:   #6b7280;
+    --border:  #e0d9cf;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── noise texture overlay ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── blob backgrounds ── */
+  .blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .blob-1 { width: 600px; height: 600px; background: var(--accent2); top: -200px; right: -150px; }
+  .blob-2 { width: 400px; height: 400px; background: #b7e4c7; bottom: -100px; left: -100px; }
+
+  /* ── nav ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 48px;
+    background: rgba(250, 248, 244, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+  }
+
+  .nav-tag {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 100px;
+    background: var(--warm);
+  }
+
+  /* ── hero ── */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    padding: 8px 18px;
+    border: 1px solid #b7e4c7;
+    border-radius: 100px;
+    background: rgba(82, 183, 136, 0.08);
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent2);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    color: var(--ink);
+    max-width: 800px;
+    margin-bottom: 28px;
+    animation: fadeUp 0.6s 0.1s ease both;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-size: clamp(17px, 2.2vw, 20px);
+    font-weight: 300;
+    color: var(--muted);
+    max-width: 520px;
+    line-height: 1.65;
+    margin-bottom: 52px;
+    animation: fadeUp 0.6s 0.2s ease both;
+  }
+
+  /* ── waitlist form ── */
+  .form-wrap {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    max-width: 480px;
+    animation: fadeUp 0.6s 0.3s ease both;
+  }
+
+  .form-wrap input {
+    flex: 1;
+    padding: 16px 20px;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    background: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .form-wrap input:focus {
+    border-color: var(--accent2);
+    box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+  }
+
+  .form-wrap input::placeholder { color: #b0a99f; }
+
+  .btn {
+    padding: 16px 28px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 16px rgba(45, 106, 79, 0.25);
+  }
+
+  .btn:hover {
+    background: #1e5038;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(45, 106, 79, 0.3);
+  }
+
+  .btn:active { transform: translateY(0); }
+
+  .privacy-note {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #b0a99f;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  /* ── success state ── */
+  .success-msg {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 24px;
+    background: rgba(82, 183, 136, 0.1);
+    border: 1px solid #b7e4c7;
+    border-radius: 12px;
+    color: var(--accent);
+    font-size: 15px;
+    font-weight: 500;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .success-icon { font-size: 20px; }
+
+  /* ── how it works ── */
+  .how {
+    position: relative;
+    z-index: 1;
+    padding: 100px 24px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 64px;
+    color: var(--ink);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .step {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 36px 32px;
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(26, 26, 46, 0.08);
+  }
+
+  .step-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 48px;
+    color: var(--border);
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .step h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+
+  /* ── pain points ── */
+  .pain {
+    position: relative;
+    z-index: 1;
+    background: var(--warm);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 80px 24px;
+  }
+
+  .pain-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .pain-inner blockquote {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 3.5vw, 38px);
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+
+  .pain-inner blockquote em { color: var(--accent); font-style: italic; }
+
+  .pain-source {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ── cta bottom ── */
+  .cta-bottom {
+    position: relative;
+    z-index: 1;
+    padding: 100px 24px;
+    text-align: center;
+  }
+
+  .cta-bottom h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .cta-bottom p {
+    color: var(--muted);
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .form-wrap-center {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ── footer ── */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--accent);
+  }
+
+  .footer-note {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* ── count ── */
+  .count-wrap {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    animation: fadeUp 0.6s 0.45s ease both;
+  }
+
+  .count-wrap span {
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  /* ── animations ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    .form-wrap, .form-wrap-center { flex-direction: column; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">OkSpend</div>
+  <div class="nav-tag">Early Access</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="eyebrow">
+    <span class="eyebrow-dot"></span>
+    Now accepting early access signups
+  </div>
+
+  <h1>Should I spend<br>this money? <em>Finally,</em><br>an answer.</h1>
+
+  <p class="subtitle">
+    OkSpend knows your finances, understands your goals, and tells you — before any purchase — whether it's a green light or a red one. With a reason.
+  </p>
+
+  <div class="form-wrap" id="form-top">
+    <input type="email" id="email-top" placeholder="Your email address" />
+    <button class="btn" onclick="handleSignup('top')">Join the waitlist</button>
+  </div>
+
+  <div class="success-msg" id="success-top">
+    <span class="success-icon">✓</span>
+    You're on the list — we'll be in touch.
+  </div>
+
+  <p class="privacy-note">No spam. No selling your data. Ever.</p>
+
+  <div class="count-wrap">
+    <span id="counter">47</span> people already on the waitlist
+  </div>
+</section>
+
+<!-- Pain quote -->
+<div class="pain">
+  <div class="pain-inner">
+    <blockquote>
+      "I knew I could technically afford it.<br>I still felt <em>terrible</em> about it for a week."
+    </blockquote>
+    <p class="pain-source">— Something most of us have said at least once</p>
+  </div>
+</div>
+
+<!-- How it works -->
+<section class="how">
+  <p class="section-label">How it works</p>
+  <h2 class="section-title">Built around you, not just your balance</h2>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>Tell us about yourself</h3>
+      <p>Your income, your goals, your spending personality. OkSpend builds a picture of you — not just your numbers.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>Ask before you spend</h3>
+      <p>About to buy something? Check in with OkSpend. Tell it what you're thinking of buying and how much it costs.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>Get a real answer</h3>
+      <p>Not just yes or no. OkSpend tells you why — based on where you are this month, what you're saving for, and what makes you happy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA bottom -->
+<section class="cta-bottom">
+  <h2>Stop second-guessing.<br>Start spending with clarity.</h2>
+  <p>Be among the first to try OkSpend when it launches.</p>
+
+  <div class="form-wrap-center" id="form-bottom">
+    <input type="email" id="email-bottom" placeholder="Your email address" style="flex:1; padding:16px 20px; border:1.5px solid var(--border); border-radius:12px; background:white; font-family:'DM Sans',sans-serif; font-size:15px; color:var(--ink); outline:none;" />
+    <button class="btn" onclick="handleSignup('bottom')">Join the waitlist</button>
+  </div>
+
+  <div class="success-msg" id="success-bottom" style="margin:0 auto; max-width:480px; margin-top:0;">
+    <span class="success-icon">✓</span>
+    You're on the list — we'll be in touch.
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-logo">OkSpend</div>
+  <p class="footer-note">© 2026 OkSpend. Built with curiosity.</p>
+</footer>
+
+<script>
+  // Fake counter that slowly increments to feel alive
+  let count = 47;
+  setInterval(() => {
+    if (Math.random() > 0.7) {
+      count++;
+      const el = document.getElementById('counter');
+      if (el) el.textContent = count;
+    }
+  }, 8000);
+
+  function handleSignup(position) {
+    const emailInput = document.getElementById('email-' + position);
+    const email = emailInput.value.trim();
+
+    if (!email || !email.includes('@')) {
+      emailInput.style.borderColor = '#e57373';
+      emailInput.focus();
+      setTimeout(() => emailInput.style.borderColor = '', 1500);
+      return;
+    }
+
+    // Store email in localStorage so you can retrieve it
+    const emails = JSON.parse(localStorage.getItem('okspend_waitlist') || '[]');
+    if (!emails.includes(email)) {
+      emails.push(email);
+      localStorage.setItem('okspend_waitlist', JSON.stringify(emails));
+      count++;
+      const counter = document.getElementById('counter');
+      if (counter) counter.textContent = count;
+    }
+
+    // Show success
+    document.getElementById('form-' + position).style.display = 'none';
+    const success = document.getElementById('success-' + position);
+    success.style.display = 'flex';
+
+    // Also open a mailto as a backup to collect the email
+    setTimeout(() => {
+      window.location.href = `mailto:rahulrc@udel.edu?subject=OkSpend Waitlist&body=Email: ${encodeURIComponent(email)}`;
+    }, 800);
+  }
+
+  // Allow enter key
+  document.querySelectorAll('input[type=email]').forEach(input => {
+    input.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        const pos = input.id.split('-')[1];
+        handleSignup(pos);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
