@@ -514,9 +514,10 @@
     }
   }, 8000);
 
-  function handleSignup(position) {
+  async function handleSignup(position) {
     const emailInput = document.getElementById('email-' + position);
     const email = emailInput.value.trim();
+    const btn = emailInput.nextElementSibling;
 
     if (!email || !email.includes('@')) {
       emailInput.style.borderColor = '#e57373';
@@ -525,25 +526,32 @@
       return;
     }
 
-    // Store email in localStorage so you can retrieve it
-    const emails = JSON.parse(localStorage.getItem('okspend_waitlist') || '[]');
-    if (!emails.includes(email)) {
-      emails.push(email);
-      localStorage.setItem('okspend_waitlist', JSON.stringify(emails));
-      count++;
-      const counter = document.getElementById('counter');
-      if (counter) counter.textContent = count;
+    btn.textContent = 'Joining...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('https://formspree.io/f/xaqlerqr', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ email, source: 'okspend-landing-' + position })
+      });
+
+      if (res.ok) {
+        count++;
+        const counter = document.getElementById('counter');
+        if (counter) counter.textContent = count;
+        document.getElementById('form-' + position).style.display = 'none';
+        document.getElementById('success-' + position).style.display = 'flex';
+      } else {
+        btn.textContent = 'Join the waitlist';
+        btn.disabled = false;
+        emailInput.style.borderColor = '#e57373';
+      }
+    } catch (err) {
+      btn.textContent = 'Join the waitlist';
+      btn.disabled = false;
+      emailInput.style.borderColor = '#e57373';
     }
-
-    // Show success
-    document.getElementById('form-' + position).style.display = 'none';
-    const success = document.getElementById('success-' + position);
-    success.style.display = 'flex';
-
-    // Also open a mailto as a backup to collect the email
-    setTimeout(() => {
-      window.location.href = `mailto:rahulrc@udel.edu?subject=OkSpend Waitlist&body=Email: ${encodeURIComponent(email)}`;
-    }, 800);
   }
 
   // Allow enter key
