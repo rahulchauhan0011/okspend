@@ -371,6 +371,86 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  /* ── mission section ── */
+  .mission {
+    position: relative; z-index: 1;
+    background: var(--ink);
+    padding: 100px 24px;
+    overflow: hidden;
+  }
+
+  .mission::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.08;
+    top: -200px; right: -200px;
+    pointer-events: none;
+  }
+
+  .mission-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; z-index: 1;
+  }
+
+  .mission-eyebrow {
+    display: inline-block;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 32px;
+    padding: 6px 16px;
+    border: 1px solid rgba(82,183,136,0.3);
+    border-radius: 100px;
+  }
+
+  .mission-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(30px, 4.5vw, 52px);
+    line-height: 1.15; letter-spacing: -1px;
+    color: var(--cream);
+    margin-bottom: 32px;
+  }
+
+  .mission-headline em {
+    font-style: italic;
+    color: var(--accent2);
+  }
+
+  .mission-body {
+    font-size: clamp(16px, 2vw, 19px);
+    line-height: 1.75; font-weight: 300;
+    color: #9999bb;
+    max-width: 620px;
+    margin: 0 auto 48px;
+  }
+
+  .mission-body strong {
+    color: var(--cream);
+    font-weight: 500;
+  }
+
+  .mission-pledge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 16px;
+    padding: 18px 28px;
+    font-size: 14px;
+    color: #ccccdd;
+    line-height: 1.55;
+    max-width: 560px;
+    text-align: left;
+  }
+
+  .mission-pledge-icon { font-size: 22px; flex-shrink: 0; }
+
   @media (max-width: 640px) {
     nav { padding: 16px 20px; }
     .form-wrap, .form-wrap-center { flex-direction: column; }
@@ -531,6 +611,30 @@
     </div>
   </div>
 
+</section>
+
+<!-- ── Mission section ── -->
+<section class="mission">
+  <div class="mission-inner">
+
+    <div class="mission-eyebrow">Our mission</div>
+
+    <h2 class="mission-headline">
+      It's time to democratise<br>financial intelligence — <em>for everyone.</em>
+    </h2>
+
+    <p class="mission-body">
+      You put in the work. You earn the money. You deserve to feel <strong>good</strong> about how you spend it.<br><br>
+      But for most people, spending still feels like guessing. Financial advice has always been reserved for people who already have wealth. Everyone else is left to figure it out alone — anxious, second-guessing, never quite sure if they made the right call.<br><br>
+      <strong>That's what OkSpend is here to change.</strong> We believe that the kind of intelligent, personalised financial guidance that used to cost thousands of dollars a year should be available to every single person — regardless of how much they earn or how much they have saved.
+    </p>
+
+    <div class="mission-pledge">
+      <span class="mission-pledge-icon">🤝</span>
+      <span>We will <strong style="color:#fff;">never</strong> sell your data, misuse your information, or recommend financial products for our own gain. Our only goal is to help you feel more confident, more in control, and more at peace with your money — because you worked hard for it, and you deserve to enjoy it.</span>
+    </div>
+
+  </div>
 </section>
 
 <!-- CTA bottom -->
