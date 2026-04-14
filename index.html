@@ -144,21 +144,8 @@
   .pm-prevention .pm-card-title { color:var(--cream); }
   .pm-prevention .pm-card-body { color:#9999bb; }
 
-  /* HOW IT WORKS */
-  .how-diagram { position:relative; z-index:1; padding:100px 24px; max-width:760px; margin:0 auto; }
-  .section-label { text-align:center; font-size:12px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent2); margin-bottom:20px; }
-  .section-title { font-family:'DM Serif Display',serif; font-size:clamp(32px,4vw,48px); text-align:center; letter-spacing:-1px; margin-bottom:64px; color:var(--ink); }
-  .flow-list { display:flex; flex-direction:column; gap:0; margin-bottom:64px; }
-  .flow-item { display:flex; gap:20px; align-items:flex-start; opacity:0; transform:translateY(16px); transition:opacity 0.5s ease,transform 0.5s ease; }
-  .flow-item.visible { opacity:1; transform:translateY(0); }
-  .flow-left { display:flex; flex-direction:column; align-items:center; flex-shrink:0; width:52px; }
-  .flow-icon { width:52px; height:52px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:22px; flex-shrink:0; border:1.5px solid var(--border); background:white; box-shadow:0 2px 12px rgba(26,26,46,0.06); }
-  .flow-line { width:2px; flex:1; min-height:32px; background:linear-gradient(var(--border),transparent); margin:4px 0; }
-  .flow-card { flex:1; background:white; border:1.5px solid var(--border); border-radius:16px; padding:22px 24px; margin-bottom:20px; transition:transform 0.2s ease,box-shadow 0.2s ease; }
-  .flow-card:hover { transform:translateY(-2px); box-shadow:0 8px 32px rgba(26,26,46,0.08); }
-  .flow-tag { font-size:10px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent2); margin-bottom:6px; }
-  .flow-title { font-family:'DM Serif Display',serif; font-size:19px; color:var(--ink); margin-bottom:6px; line-height:1.3; }
-  .flow-body { font-size:14px; line-height:1.65; color:var(--muted); font-weight:400; }
+  /* DIFFERENTIATORS */
+  .differentiators { position:relative; z-index:1; padding:36px 24px 100px; max-width:860px; margin:0 auto; }
   .diff-label { text-align:center; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#9999aa; margin-bottom:20px; }
   .diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:52px; }
   .diff-card { background:var(--ink); border-radius:16px; padding:24px 20px; text-align:center; color:white; }
@@ -256,8 +243,8 @@
 <section class="hero" data-section="hero">
   <div class="eyebrow"><span class="eyebrow-dot"></span>Now accepting early access signups</div>
   <div class="for-tag">For <strong>young professionals</strong> who work hard, earn good money, and still feel uncertain every time they spend it</div>
-  <h1>Should I spend<br>this money? <em>Finally,</em><br>an answer.</h1>
-  <p class="subtitle">OkSpend knows your finances, understands your goals, and tells you — before any purchase — whether it's a green light or a red one. With a reason.</p>
+  <h1>$180 shoes. Payday in four days. Should you?</h1>
+  <p class="subtitle">OkSpend checks your finances, your goals, and your spending personality — and tells you right now.</p>
 
   <div class="form-wrap" id="form-top">
     <input type="email" id="email-top" placeholder="Your email address" />
@@ -332,17 +319,8 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section class="how-diagram" data-section="how_it_works">
-  <p class="section-label">How OkSpend works</p>
-  <h2 class="section-title">From uncertainty to clarity,<br>before you spend a dollar</h2>
-  <div class="flow-list">
-    <div class="flow-item"><div class="flow-left"><div class="flow-icon">🤔</div><div class="flow-line"></div></div><div class="flow-card"><div class="flow-tag">The moment</div><div class="flow-title">You're about to buy something</div><div class="flow-body">You see something you want. The uncertainty creeps in. Should you? Can you afford it? Will you regret it? Right now, you have no good answer.</div></div></div>
-    <div class="flow-item"><div class="flow-left"><div class="flow-icon">📲</div><div class="flow-line"></div></div><div class="flow-card"><div class="flow-tag">You ask OkSpend</div><div class="flow-title">Tell us what you're about to buy</div><div class="flow-body">Before you tap "buy," open OkSpend and describe the purchase. Ten seconds. OkSpend already knows the rest — your finances, your personality, your goals.</div></div></div>
-    <div class="flow-item"><div class="flow-left"><div class="flow-icon">🧠</div><div class="flow-line"></div></div><div class="flow-card"><div class="flow-tag">OkSpend thinks</div><div class="flow-title">We look at the full picture</div><div class="flow-body">OkSpend combines your psychological profile — how you relate to money, what triggers your spending — with your real financial position and your stated goals.</div></div></div>
-    <div class="flow-item"><div class="flow-left"><div class="flow-icon">✅</div><div class="flow-line"></div></div><div class="flow-card"><div class="flow-tag">Your answer</div><div class="flow-title">A clear yes or no — with a real reason</div><div class="flow-body">Not a budget alert. Not a generic tip. A personalized answer: <em>"Yes — this fits your goals"</em> or <em>"Not right now — here's why."</em></div></div></div>
-    <div class="flow-item"><div class="flow-left"><div class="flow-icon">😌</div></div><div class="flow-card"><div class="flow-tag">The outcome</div><div class="flow-title">You decide — with confidence</div><div class="flow-body">Whether you buy it or walk away, you do it knowing it was the right call. No more guilt. No more second-guessing. Just clarity.</div></div></div>
-  </div>
+<!-- DIFFERENTIATORS -->
+<section class="differentiators" data-section="differentiators">
   <div class="diff-label">What makes OkSpend different</div>
   <div class="diff-grid">
     <div class="diff-card"><div class="diff-icon">🔮</div><div class="diff-title">Before the purchase</div><div class="diff-body">Every other app tells you what you already spent. OkSpend works upstream, where the decision actually happens.</div></div>
@@ -391,6 +369,7 @@
         <a href="https://github.com/rahulchauhan0011" target="_blank" class="founder-link">GitHub →</a>
         <a href="mailto:rahulrc@udel.edu" class="founder-link">Email me →</a>
       </div>
+      <p class="founder-bio" style="margin-top:18px;">If this resonates with you, I'd love to hear your story — feel free to reach out.</p>
     </div>
   </div>
 </section>
@@ -554,16 +533,6 @@ document.querySelectorAll('input[type=email]').forEach(input => {
   });
 });
 
-// Flow item scroll animations
-const flowObs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 120);
-      flowObs.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll('.flow-item').forEach(el => flowObs.observe(el));
 </script>
 
 </body>
