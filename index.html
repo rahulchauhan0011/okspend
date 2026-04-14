@@ -188,6 +188,19 @@
   .peace-closing { font-size:16px; line-height:1.8; color:var(--muted); font-weight:300; max-width:640px; }
   .peace-closing strong { color:var(--ink); font-weight:500; }
 
+  /* NAME SUGGESTION */
+  .name-suggestion { position:relative; z-index:1; background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:80px 24px; }
+  .name-suggestion-inner { max-width:720px; margin:0 auto; }
+  .name-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:16px; }
+  .name-title { font-family:'DM Serif Display',serif; font-size:clamp(30px,4vw,44px); line-height:1.2; letter-spacing:-0.6px; color:var(--ink); margin-bottom:22px; }
+  .name-quote { border-left:3px solid var(--accent2); padding-left:20px; margin-bottom:22px; }
+  .name-quote p { font-family:'DM Serif Display',serif; font-size:clamp(20px,2.6vw,28px); color:var(--accent); font-style:italic; line-height:1.35; }
+  .name-body { font-size:15px; line-height:1.75; color:var(--muted); margin-bottom:24px; }
+  .name-form { display:flex; gap:12px; width:100%; flex-wrap:wrap; }
+  .name-form input { flex:1; min-width:220px; padding:16px 20px; border:1.5px solid var(--border); border-radius:12px; background:white; font-family:'DM Sans',sans-serif; font-size:15px; color:var(--ink); outline:none; transition:border-color 0.2s,box-shadow 0.2s; }
+  .name-form input:focus { border-color:var(--accent2); box-shadow:0 0 0 3px rgba(82,183,136,0.15); }
+  .name-form input::placeholder { color:#b0a99f; }
+
   /* FOUNDER */
   .founder { position:relative; z-index:1; padding:80px 24px; max-width:720px; margin:0 auto; }
   .founder-inner { display:flex; gap:40px; align-items:flex-start; }
@@ -216,7 +229,7 @@
 
   @media (max-width:680px) {
     nav { padding:16px 20px; }
-    .form-wrap,.form-wrap-center { flex-direction:column; }
+    .form-wrap,.form-wrap-center,.name-form { flex-direction:column; }
     footer { flex-direction:column; gap:8px; text-align:center; }
     .diff-grid,.quotes-grid,.peace-feelings { grid-template-columns:1fr; }
     .postmortem-inner { grid-template-columns:1fr; }
@@ -352,6 +365,22 @@
     </div>
     <div class="peace-statement"><p>Think about the last time someone validated you — told you that what you were doing was okay, that your decision made sense.<br><br>Even if you weren't looking for it, it felt good. It made you <em>calmer</em>. More confident. More at peace.<br><br>That feeling — that quiet relief — is exactly what OkSpend gives you, every time you spend.</p></div>
     <p class="peace-closing">Most people carry a low-level anxiety about money <strong>all the time.</strong> Not because they're bad with money. Not because they don't earn enough. But because no one has ever told them, in the moment, that they're doing okay.<br><br>OkSpend does that. And that small shift — from anxiety to confidence — turns out to make an <strong>enormous difference</strong> in how you feel about your life.</p>
+  </div>
+</section>
+
+<!-- NAME SUGGESTION -->
+<section class="name-suggestion" data-section="name_suggestion">
+  <div class="name-suggestion-inner">
+    <div class="name-eyebrow">HELP US DECIDE</div>
+    <h2 class="name-title">What should we call this?</h2>
+    <div class="name-quote"><p>"The person who names this wins a piece of it."</p></div>
+    <p class="name-body">We're still deciding on the final name. And honestly — you understand what this product means better than we do. If a name comes to mind that captures the feeling of finally having someone in your corner before a purchase, we genuinely want to hear it. The best suggestion gets a lifetime free subscription when we launch.</p>
+    <form class="name-form" id="name-form" onsubmit="handleNameSuggestion(event)">
+      <input type="text" id="name-suggestion-input" placeholder="Your name suggestion" />
+      <input type="email" id="name-email-input" placeholder="Your email address" />
+      <button class="btn" type="submit">Submit my suggestion</button>
+    </form>
+    <div class="success-msg" id="name-success" style="margin-top:14px;">✓ Got it — thank you. We'll be in touch if yours wins.</div>
   </div>
 </section>
 
@@ -523,6 +552,53 @@ async function handleSignup(position) {
     btn.textContent = 'Join the waitlist'; btn.disabled = false;
     emailInput.style.borderColor = '#e57373';
     analyticsEvent('signup_failed', { reason: 'network_error', position, traffic_source: utm.source });
+  }
+}
+
+async function handleNameSuggestion(event) {
+  event.preventDefault();
+  const suggestionInput = document.getElementById('name-suggestion-input');
+  const emailInput = document.getElementById('name-email-input');
+  const form = document.getElementById('name-form');
+  const success = document.getElementById('name-success');
+  const btn = form ? form.querySelector('button[type="submit"]') : null;
+  const suggestion = suggestionInput.value.trim();
+  const email = emailInput.value.trim();
+
+  if (!suggestion || !email || !email.includes('@')) {
+    if (suggestionInput) suggestionInput.style.borderColor = '#e57373';
+    if (emailInput) emailInput.style.borderColor = '#e57373';
+    setTimeout(() => {
+      if (suggestionInput) suggestionInput.style.borderColor = '';
+      if (emailInput) emailInput.style.borderColor = '';
+    }, 1500);
+    return;
+  }
+
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+  }
+
+  try {
+    const res = await fetch('https://formspree.io/f/xaqlerqr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ suggestion, email })
+    });
+
+    if (res.ok) {
+      if (form) form.style.display = 'none';
+      if (success) success.style.display = 'flex';
+    } else {
+      if (suggestionInput) suggestionInput.style.borderColor = '#e57373';
+      if (emailInput) emailInput.style.borderColor = '#e57373';
+      if (btn) { btn.disabled = false; btn.textContent = 'Submit my suggestion'; }
+    }
+  } catch (err) {
+    if (suggestionInput) suggestionInput.style.borderColor = '#e57373';
+    if (emailInput) emailInput.style.borderColor = '#e57373';
+    if (btn) { btn.disabled = false; btn.textContent = 'Submit my suggestion'; }
   }
 }
 
