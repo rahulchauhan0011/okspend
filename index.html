@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OkSpend — Spend with confidence</title>
-<meta name="description" content="OkSpend tells you whether to make a purchase before you make it — using your psychology, your finances, and your goals. Join the waitlist.">
+<title>budge — Makes Buying Hard Again</title>
+<meta name="description" content="budge puts friction back into buying — reflection, a guard over Buy, and a sixty-second pause — so you spend with intention, not impulse. Join the waitlist.">
 <link rel="canonical" href="https://rahulchauhan0011.github.io/okspend/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rahulchauhan0011.github.io/okspend/">
-<meta property="og:title" content="OkSpend — Spend with confidence">
-<meta property="og:description" content="OkSpend tells you whether to make a purchase before you make it — using your psychology, your finances, and your goals. Join the waitlist.">
-<meta property="og:site_name" content="OkSpend">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OkSpend — Spend with confidence">
-<meta name="twitter:description" content="OkSpend tells you whether to make a purchase before you make it — using your psychology, your finances, and your goals. Join the waitlist.">
-<meta name="theme-color" content="#2d6a4f">
+<meta property="og:title" content="budge — Makes Buying Hard Again">
+<meta property="og:description" content="budge puts friction back into buying — before you splurge. Join the waitlist for July 2026.">
+<meta property="og:site_name" content="budge">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="budge — Makes Buying Hard Again">
+<meta name="twitter:description" content="budge puts friction back into buying — before you splurge. Join the waitlist for July 2026.">
+<meta name="theme-color" content="#143d2c">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1D8BR6CJ2R"></script>
@@ -25,7 +25,7 @@
   gtag('config', 'G-1D8BR6CJ2R');
 </script>
 
-<!-- PostHog (snippet from PostHog project install) -->
+<!-- PostHog -->
 <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Dr qr Ci Br Zr Pr capture calculateEventProperties Ur register register_once register_for_session unregister unregister_for_session Xr getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Jr identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Wr Hr createPersonProfile setInternalOrTestUser Gr Fr tn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $r debug ki Yr getPageViewId captureTraceFeedback captureTraceMetric Rr".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_xMVVnJpCsXLVjjHS4KV8WwWEpFAuzB63kTHfidGhdiQD', {
@@ -35,406 +35,723 @@
     });
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root { --ink:#1a1a2e; --cream:#faf8f4; --warm:#f0ebe1; --accent:#2d6a4f; --accent2:#52b788; --muted:#6b7280; --border:#e0d9cf; }
+  :root {
+    --ink: #0f1f18;
+    --cream: #f7f4ee;
+    --warm: #ebe6dc;
+    --forest: #143d2c;
+    --forest-deep: #0d2a1e;
+    --lime: #c8ef6a;
+    --lime-soft: #a8d65a;
+    --muted: #5c6b63;
+    --border: #d8d2c6;
+  }
   html { scroll-behavior: smooth; }
-  body { background:var(--cream); color:var(--ink); font-family:'DM Sans',sans-serif; font-weight:300; min-height:100vh; overflow-x:hidden; }
-  body::before { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:0; }
-  .blob { position:fixed; border-radius:50%; filter:blur(80px); opacity:0.18; pointer-events:none; z-index:0; }
-  .blob-1 { width:600px; height:600px; background:var(--accent2); top:-200px; right:-150px; }
-  .blob-2 { width:400px; height:400px; background:#b7e4c7; bottom:-100px; left:-100px; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-  nav { position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:20px 48px; background:rgba(250,248,244,0.85); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
-  .logo { font-family:'DM Serif Display',serif; font-size:22px; color:var(--accent); letter-spacing:-0.5px; }
-  .nav-tag { font-size:12px; font-weight:500; color:var(--muted); letter-spacing:0.08em; text-transform:uppercase; border:1px solid var(--border); padding:6px 14px; border-radius:100px; background:var(--warm); }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(13, 42, 30, 0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(200, 239, 106, 0.12);
+  }
+  .logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 26px;
+    letter-spacing: -0.04em;
+    color: var(--lime);
+    text-decoration: none;
+  }
+  .logo span { color: #fff; }
+  .nav-tag {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--lime); border: 1px solid rgba(200,239,106,0.35);
+    padding: 7px 14px; border-radius: 999px;
+  }
 
-  .hero { position:relative; z-index:1; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:120px 24px 80px; }
+  /* HERO */
+  .hero {
+    position: relative; z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: end;
+    gap: 0;
+    background: var(--forest-deep);
+    color: #fff;
+    overflow: hidden;
+    padding: 0;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 70% 55% at 80% 30%, rgba(200,239,106,0.14), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 10% 90%, rgba(82,183,136,0.12), transparent 55%);
+    pointer-events: none;
+  }
+  .hero-copy {
+    position: relative; z-index: 2;
+    padding: 140px 48px 80px 56px;
+    max-width: 640px;
+  }
+  .hero-brand {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(64px, 11vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -0.05em;
+    color: var(--lime);
+    margin-bottom: 18px;
+    animation: fadeUp 0.7s ease both;
+  }
+  .hero-brand span { color: #fff; }
+  .hero-tagline {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(26px, 3.5vw, 40px);
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 18px;
+    animation: fadeUp 0.7s 0.08s ease both;
+  }
+  .hero-sub {
+    font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.72);
+    max-width: 420px; margin-bottom: 36px;
+    animation: fadeUp 0.7s 0.16s ease both;
+  }
+  .form-wrap {
+    display: flex; gap: 10px; width: 100%; max-width: 460px;
+    animation: fadeUp 0.7s 0.24s ease both;
+  }
+  .form-wrap input, .form-wrap-center input {
+    flex: 1; padding: 16px 18px;
+    border: 1.5px solid rgba(255,255,255,0.18);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    color: #fff;
+    font-family: 'DM Sans', sans-serif; font-size: 15px;
+    outline: none;
+  }
+  .form-wrap input::placeholder, .form-wrap-center input::placeholder { color: rgba(255,255,255,0.45); }
+  .form-wrap input:focus, .form-wrap-center input:focus {
+    border-color: var(--lime);
+    box-shadow: 0 0 0 3px rgba(200,239,106,0.18);
+  }
+  .btn {
+    padding: 16px 26px;
+    background: var(--lime); color: var(--forest-deep);
+    border: none; border-radius: 12px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500;
+    cursor: pointer; white-space: nowrap;
+    transition: transform 0.15s, background 0.2s;
+  }
+  .btn:hover { background: #d8f78a; transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); }
+  .btn-dark {
+    background: var(--forest); color: #fff;
+  }
+  .btn-dark:hover { background: #1b4d38; }
+  .privacy-note {
+    margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.45);
+    animation: fadeUp 0.7s 0.32s ease both;
+  }
+  .success-msg {
+    display: none; align-items: center; gap: 10px;
+    padding: 14px 20px; margin-top: 12px; max-width: 460px;
+    background: rgba(200,239,106,0.12); border: 1px solid rgba(200,239,106,0.35);
+    border-radius: 12px; color: var(--lime); font-size: 14px; font-weight: 500;
+  }
 
-  .eyebrow { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:500; color:var(--accent); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:24px; padding:8px 18px; border:1px solid #b7e4c7; border-radius:100px; background:rgba(82,183,136,0.08); animation:fadeUp 0.6s ease both; }
-  .eyebrow-dot { width:6px; height:6px; border-radius:50%; background:var(--accent2); animation:pulse 2s infinite; }
-  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
+  .hero-visual {
+    position: relative; z-index: 2;
+    display: flex; align-items: flex-end; justify-content: center;
+    padding: 100px 40px 0 0;
+    min-height: 100%;
+  }
+  .hero-phone {
+    width: min(340px, 78%);
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.45));
+    animation: floatIn 1s 0.2s ease both;
+    transform-origin: bottom center;
+  }
+  .hero-phone img {
+    width: 100%; height: auto; display: block;
+    border-radius: 28px;
+  }
 
-  .for-tag { display:inline-block; font-size:13px; color:var(--muted); background:var(--warm); border:1px solid var(--border); padding:7px 16px; border-radius:100px; margin-bottom:24px; animation:fadeUp 0.6s 0.05s ease both; }
-  .for-tag strong { color:var(--ink); font-weight:500; }
+  /* PROBLEM */
+  .problem {
+    position: relative; z-index: 1;
+    padding: 100px 24px;
+    background: var(--cream);
+  }
+  .problem-inner { max-width: 980px; margin: 0 auto; }
+  .eyebrow {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--lime-soft); margin-bottom: 18px;
+  }
+  .problem .eyebrow { color: var(--forest); }
+  .problem-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.05; letter-spacing: -1px;
+    color: var(--forest);
+    margin-bottom: 48px;
+  }
+  .problem-headline em { font-style: italic; }
+  .problem-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .henry {
+    background: var(--forest);
+    color: #fff;
+    border-radius: 24px;
+    padding: 40px 36px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    min-height: 280px;
+  }
+  .henry-name {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(42px, 6vw, 64px);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .henry-desc { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 28px; }
+  .henry-def {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--lime);
+  }
+  .stats { display: flex; flex-direction: column; gap: 16px; }
+  .stat {
+    background: var(--warm);
+    border-radius: 20px;
+    padding: 28px 30px;
+  }
+  .stat-num {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(40px, 5vw, 56px);
+    color: var(--forest);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .stat-label { font-size: 15px; color: var(--muted); line-height: 1.45; }
+  .cite { margin-top: 20px; font-size: 12px; color: #9aa59e; }
 
-  h1 { font-family:'DM Serif Display',serif; font-size:clamp(48px,7vw,88px); line-height:1.05; letter-spacing:-2px; color:var(--ink); max-width:800px; margin-bottom:28px; animation:fadeUp 0.6s 0.1s ease both; }
-  h1 em { font-style:italic; color:var(--accent); }
+  /* UNSOLVED */
+  .unsolved {
+    background: var(--forest);
+    color: #fff;
+    padding: 100px 24px;
+    position: relative; z-index: 1;
+  }
+  .unsolved-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+  .unsolved .eyebrow { color: var(--lime); }
+  .unsolved-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 4.5vw, 48px);
+    line-height: 1.2; letter-spacing: -0.5px;
+    margin-bottom: 48px;
+  }
+  .unsolved-headline em { font-style: italic; color: var(--lime); }
+  .fail-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  }
+  .fail-item {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 28px 20px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: clamp(16px, 2vw, 20px);
+    letter-spacing: -0.02em;
+    color: var(--lime);
+  }
 
-  .subtitle { font-size:clamp(17px,2.2vw,20px); font-weight:300; color:var(--muted); max-width:520px; line-height:1.65; margin-bottom:52px; animation:fadeUp 0.6s 0.2s ease both; }
+  /* BUILDING */
+  .building {
+    position: relative; z-index: 1;
+    padding: 100px 24px;
+    background: var(--cream);
+  }
+  .building-inner { max-width: 980px; margin: 0 auto; }
+  .building .eyebrow { color: var(--forest); }
+  .building-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(34px, 5vw, 56px);
+    line-height: 1.1; letter-spacing: -1px;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .building-headline em { font-style: italic; color: var(--forest); text-transform: uppercase; }
+  .building-sub {
+    font-size: 16px; color: var(--muted); max-width: 520px; margin-bottom: 48px; line-height: 1.6;
+  }
+  .pillars {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px;
+  }
+  .pillar {
+    background: var(--warm);
+    border-radius: 20px;
+    padding: 32px 26px;
+    min-height: 180px;
+  }
+  .pillar.featured {
+    background: var(--forest);
+    color: #fff;
+  }
+  .pillar.featured .pillar-title { color: var(--lime); }
+  .pillar.featured .pillar-body { color: rgba(255,255,255,0.78); }
+  .pillar-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--forest);
+    margin-bottom: 10px;
+  }
+  .pillar-body { font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .more-label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #9aa59e; margin-bottom: 16px;
+  }
+  .more-row {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+  }
+  .more-item {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 14px;
+    background: #fff;
+  }
+  .more-title { font-size: 13px; font-weight: 500; color: var(--forest); margin-bottom: 6px; }
+  .more-body { font-size: 12px; line-height: 1.45; color: var(--muted); }
+  .research-note {
+    margin-top: 28px; font-size: 12px; font-style: italic; color: #9aa59e; line-height: 1.5;
+  }
 
-  .form-wrap { display:flex; gap:12px; width:100%; max-width:480px; animation:fadeUp 0.6s 0.3s ease both; }
-  .form-wrap input,.form-wrap-center input { flex:1; padding:16px 20px; border:1.5px solid var(--border); border-radius:12px; background:white; font-family:'DM Sans',sans-serif; font-size:15px; color:var(--ink); outline:none; transition:border-color 0.2s,box-shadow 0.2s; }
-  .form-wrap input:focus,.form-wrap-center input:focus { border-color:var(--accent2); box-shadow:0 0 0 3px rgba(82,183,136,0.15); }
-  .form-wrap input::placeholder,.form-wrap-center input::placeholder { color:#b0a99f; }
+  /* MOCKUPS */
+  .mockups {
+    position: relative; z-index: 1;
+    background: var(--warm);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 100px 24px;
+  }
+  .mockups-inner { max-width: 1100px; margin: 0 auto; }
+  .mockups .eyebrow { color: var(--forest); text-align: center; }
+  .mockups-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4.5vw, 48px);
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  .mockups-sub {
+    text-align: center; color: var(--muted); font-size: 16px;
+    max-width: 520px; margin: 0 auto 52px; line-height: 1.6;
+  }
+  .mockup-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .mockup-card { text-align: center; }
+  .mockup-frame {
+    background: var(--forest-deep);
+    border-radius: 28px;
+    padding: 20px 16px 0;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .mockup-frame img {
+    width: 100%; height: auto; display: block;
+    border-radius: 18px 18px 0 0;
+  }
+  .mockup-label {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--forest);
+    margin-bottom: 6px;
+  }
+  .mockup-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
 
-  .btn { padding:16px 28px; background:var(--accent); color:white; border:none; border-radius:12px; font-family:'DM Sans',sans-serif; font-size:15px; font-weight:500; cursor:pointer; white-space:nowrap; transition:background 0.2s,transform 0.15s,box-shadow 0.2s; box-shadow:0 4px 16px rgba(45,106,79,0.25); }
-  .btn:hover { background:#1e5038; transform:translateY(-1px); box-shadow:0 6px 20px rgba(45,106,79,0.3); }
-  .btn:active { transform:translateY(0); }
-
-  .privacy-note { margin-top:14px; font-size:12px; color:#b0a99f; animation:fadeUp 0.6s 0.4s ease both; }
-
-  .success-msg { display:none; align-items:center; gap:10px; padding:16px 24px; background:rgba(82,183,136,0.1); border:1px solid #b7e4c7; border-radius:12px; color:var(--accent); font-size:15px; font-weight:500; animation:fadeUp 0.4s ease both; }
-  .success-icon { font-size:20px; }
-
-  .next-steps { margin-top:18px; padding:14px 20px; background:white; border:1px solid var(--border); border-radius:12px; font-size:13px; color:var(--muted); max-width:440px; line-height:1.6; animation:fadeUp 0.6s 0.42s ease both; }
-  .next-steps strong { color:var(--accent); font-weight:500; }
-
-  .count-wrap { margin-top:24px; font-size:13px; color:var(--muted); animation:fadeUp 0.6s 0.45s ease both; }
-  .count-wrap span { font-weight:500; color:var(--accent); }
-
-  /* PAIN */
-  .pain { position:relative; z-index:1; background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:80px 24px; }
-  .pain-inner { max-width:720px; margin:0 auto; text-align:center; }
-  .pain-inner blockquote { font-family:'DM Serif Display',serif; font-size:clamp(24px,3.5vw,38px); line-height:1.3; letter-spacing:-0.5px; color:var(--ink); margin-bottom:16px; }
-  .pain-inner blockquote em { color:var(--accent); font-style:italic; }
-  .pain-source { font-size:13px; color:var(--muted); }
-
-  /* QUOTES */
-  .quotes { position:relative; z-index:1; padding:80px 24px; max-width:920px; margin:0 auto; }
-  .quotes-label { text-align:center; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#9999aa; margin-bottom:32px; }
-  .quotes-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-  .quote-card { background:white; border:1.5px solid var(--border); border-radius:18px; padding:28px 24px; transition:transform 0.2s ease,box-shadow 0.2s ease; }
-  .quote-card:hover { transform:translateY(-3px); box-shadow:0 10px 36px rgba(26,26,46,0.07); }
-  .quote-mark { font-family:'DM Serif Display',serif; font-size:48px; color:var(--accent2); line-height:0.8; margin-bottom:16px; opacity:0.4; }
-  .quote-text { font-size:15px; line-height:1.7; color:var(--ink); font-style:italic; margin-bottom:20px; }
-  .quote-person { display:flex; align-items:center; gap:12px; }
-  .quote-avatar { width:36px; height:36px; border-radius:50%; background:var(--warm); border:1.5px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
-  .quote-name { font-size:13px; font-weight:500; color:var(--ink); }
-  .quote-role { font-size:12px; color:var(--muted); }
-
-  /* SCENARIO */
-  .scenario { position:relative; z-index:1; background:var(--ink); padding:80px 24px; overflow:hidden; }
-  .scenario::before { content:''; position:absolute; width:500px; height:500px; border-radius:50%; background:var(--accent); opacity:0.06; top:-150px; left:-150px; pointer-events:none; }
-  .scenario-inner { max-width:720px; margin:0 auto; position:relative; z-index:1; }
-  .scenario-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:24px; }
-  .scenario-headline { font-family:'DM Serif Display',serif; font-size:clamp(26px,3.5vw,38px); line-height:1.2; letter-spacing:-0.5px; color:var(--cream); margin-bottom:36px; }
-  .scenario-headline em { font-style:italic; color:var(--accent2); }
-  .scenario-box { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:32px; margin-bottom:24px; }
-  .scenario-step { display:flex; gap:16px; align-items:flex-start; margin-bottom:24px; }
-  .scenario-step:last-child { margin-bottom:0; }
-  .scenario-num { width:28px; height:28px; border-radius:50%; background:rgba(82,183,136,0.2); color:var(--accent2); font-size:13px; font-weight:500; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
-  .scenario-text { font-size:15px; line-height:1.7; color:#ccccdd; }
-  .scenario-text strong { color:white; font-weight:500; }
-  .scenario-text em { color:var(--accent2); font-style:normal; }
-  .scenario-result { background:rgba(82,183,136,0.12); border:1px solid rgba(82,183,136,0.25); border-radius:14px; padding:20px 24px; font-size:15px; line-height:1.65; color:#aaeec8; font-style:italic; }
-
-  /* POSTMORTEM */
-  .postmortem { position:relative; z-index:1; padding:100px 24px; max-width:860px; margin:0 auto; }
-  .postmortem-inner { display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
-  .pm-left { position:sticky; top:120px; }
-  .pm-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#c97a3a; margin-bottom:20px; }
-  .pm-headline { font-family:'DM Serif Display',serif; font-size:clamp(28px,3.5vw,40px); line-height:1.2; letter-spacing:-0.5px; color:var(--ink); margin-bottom:20px; }
-  .pm-headline em { font-style:italic; color:var(--accent); }
-  .pm-sub { font-size:15px; line-height:1.7; color:var(--muted); font-weight:300; }
-  .pm-right { display:flex; flex-direction:column; gap:20px; }
-  .pm-card { border-radius:16px; padding:24px; border:1.5px solid var(--border); transition:transform 0.2s ease; }
-  .pm-card:hover { transform:translateY(-2px); }
-  .pm-card.bad { background:#fff9f7; border-color:#f0d8cc; }
-  .pm-card.good { background:#f4fbf6; border-color:#c4e6cf; }
-  .pm-card-label { font-size:10px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:10px; }
-  .pm-card.bad .pm-card-label { color:#c97a3a; }
-  .pm-card.good .pm-card-label { color:#2d6a4f; }
-  .pm-card-title { font-family:'DM Serif Display',serif; font-size:18px; margin-bottom:8px; color:var(--ink); }
-  .pm-card-body { font-size:13.5px; line-height:1.65; color:var(--muted); }
-  .pm-divider { text-align:center; font-size:22px; color:var(--border); margin:4px 0; }
-  .pm-prevention { background:var(--ink); border-radius:16px; padding:24px; color:white; border:none; }
-  .pm-prevention .pm-card-label { color:var(--accent2); }
-  .pm-prevention .pm-card-title { color:var(--cream); }
-  .pm-prevention .pm-card-body { color:#9999bb; }
-
-  /* DIFFERENTIATORS */
-  .differentiators { position:relative; z-index:1; padding:36px 24px 100px; max-width:860px; margin:0 auto; }
-  .diff-label { text-align:center; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:#9999aa; margin-bottom:20px; }
-  .diff-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:52px; }
-  .diff-card { background:var(--ink); border-radius:16px; padding:24px 20px; text-align:center; color:white; }
-  .diff-icon { font-size:24px; margin-bottom:12px; }
-  .diff-title { font-family:'DM Serif Display',serif; font-size:16px; margin-bottom:8px; color:var(--cream); }
-  .diff-body { font-size:13px; line-height:1.55; color:#9999bb; }
-  .trust-card { background:var(--ink); border-radius:20px; padding:28px 32px; display:flex; gap:20px; align-items:center; }
-  .trust-icon { font-size:36px; flex-shrink:0; }
-  .trust-text h3 { font-family:'DM Serif Display',serif; font-size:20px; color:var(--cream); margin-bottom:6px; }
-  .trust-text p { font-size:13px; color:#9999bb; line-height:1.6; }
-
-  /* MISSION */
-  .mission { position:relative; z-index:1; background:var(--ink); padding:100px 24px; overflow:hidden; }
-  .mission::before { content:''; position:absolute; width:600px; height:600px; border-radius:50%; background:var(--accent); opacity:0.08; top:-200px; right:-200px; pointer-events:none; }
-  .mission-inner { max-width:760px; margin:0 auto; text-align:center; position:relative; z-index:1; }
-  .mission-eyebrow { display:inline-block; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:32px; padding:6px 16px; border:1px solid rgba(82,183,136,0.3); border-radius:100px; }
-  .mission-headline { font-family:'DM Serif Display',serif; font-size:clamp(30px,4.5vw,52px); line-height:1.15; letter-spacing:-1px; color:var(--cream); margin-bottom:32px; }
-  .mission-headline em { font-style:italic; color:var(--accent2); }
-  .mission-body { font-size:clamp(16px,2vw,19px); line-height:1.75; font-weight:300; color:#9999bb; max-width:620px; margin:0 auto 48px; }
-  .mission-body strong { color:var(--cream); font-weight:500; }
-  .mission-pledge { display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); border-radius:16px; padding:18px 28px; font-size:14px; color:#ccccdd; line-height:1.55; max-width:560px; text-align:left; }
-  .mission-pledge-icon { font-size:22px; flex-shrink:0; }
-
-  /* PEACE */
-  .peace { position:relative; z-index:1; background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:100px 24px; overflow:hidden; }
-  .peace::after { content:'"'; position:absolute; font-family:'DM Serif Display',serif; font-size:480px; line-height:1; color:var(--border); top:-60px; left:-20px; pointer-events:none; z-index:0; opacity:0.5; }
-  .peace-inner { max-width:760px; margin:0 auto; position:relative; z-index:1; }
-  .peace-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:28px; }
-  .peace-headline { font-family:'DM Serif Display',serif; font-size:clamp(32px,5vw,56px); line-height:1.12; letter-spacing:-1.5px; color:var(--ink); margin-bottom:48px; }
-  .peace-headline em { font-style:italic; color:var(--accent); }
-  .peace-feelings { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-bottom:52px; border-radius:20px; overflow:hidden; border:1.5px solid var(--border); }
-  .feeling { background:white; padding:28px 24px; border-right:1px solid var(--border); }
-  .feeling:last-child { border-right:none; }
-  .feeling-icon { font-size:28px; margin-bottom:14px; }
-  .feeling-title { font-family:'DM Serif Display',serif; font-size:18px; color:var(--ink); margin-bottom:8px; }
-  .feeling-body { font-size:13.5px; line-height:1.65; color:var(--muted); }
-  .peace-statement { border-left:3px solid var(--accent2); padding-left:28px; margin-bottom:48px; }
-  .peace-statement p { font-family:'DM Serif Display',serif; font-size:clamp(20px,2.8vw,28px); line-height:1.4; letter-spacing:-0.3px; color:var(--ink); font-style:italic; }
-  .peace-statement p em { font-style:normal; color:var(--accent); font-weight:500; }
-  .peace-closing { font-size:16px; line-height:1.8; color:var(--muted); font-weight:300; max-width:640px; }
-  .peace-closing strong { color:var(--ink); font-weight:500; }
-
-  /* NAME SUGGESTION */
-  .name-suggestion { position:relative; z-index:1; background:var(--warm); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:80px 24px; }
-  .name-suggestion-inner { max-width:720px; margin:0 auto; }
-  .name-eyebrow { font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:16px; }
-  .name-title { font-family:'DM Serif Display',serif; font-size:clamp(30px,4vw,44px); line-height:1.2; letter-spacing:-0.6px; color:var(--ink); margin-bottom:22px; }
-  .name-quote { border-left:3px solid var(--accent2); padding-left:20px; margin-bottom:22px; }
-  .name-quote p { font-family:'DM Serif Display',serif; font-size:clamp(20px,2.6vw,28px); color:var(--accent); font-style:italic; line-height:1.35; }
-  .name-body { font-size:15px; line-height:1.75; color:var(--muted); margin-bottom:24px; }
-  .name-form { display:flex; gap:12px; width:100%; flex-wrap:wrap; }
-  .name-form input { flex:1; min-width:220px; padding:16px 20px; border:1.5px solid var(--border); border-radius:12px; background:white; font-family:'DM Sans',sans-serif; font-size:15px; color:var(--ink); outline:none; transition:border-color 0.2s,box-shadow 0.2s; }
-  .name-form input:focus { border-color:var(--accent2); box-shadow:0 0 0 3px rgba(82,183,136,0.15); }
-  .name-form input::placeholder { color:#b0a99f; }
+  /* WHY WORKS */
+  .why-works {
+    position: relative; z-index: 1;
+    padding: 100px 24px;
+    background: var(--cream);
+  }
+  .why-works-inner { max-width: 860px; margin: 0 auto; }
+  .why-works .eyebrow { color: var(--forest); }
+  .why-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.15; letter-spacing: -1px;
+    margin-bottom: 36px;
+    color: var(--ink);
+  }
+  .why-list {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  .why-list li {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 3.2vw, 36px);
+    font-style: italic;
+    color: var(--forest);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .why-list li span {
+    font-style: normal;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--muted);
+    display: block;
+    margin-top: 4px;
+  }
+  .why-pair {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+  }
+  .why-box {
+    border-radius: 18px;
+    padding: 28px 24px;
+    font-size: 18px; font-weight: 500; line-height: 1.4;
+  }
+  .why-box.light {
+    background: #fff; border: 1px solid var(--border); color: var(--forest);
+  }
+  .why-box.dark {
+    background: var(--forest); color: var(--lime);
+  }
 
   /* FOUNDER */
-  .founder { position:relative; z-index:1; padding:80px 24px; max-width:720px; margin:0 auto; }
-  .founder-inner { display:flex; gap:40px; align-items:flex-start; }
-  .founder-avatar { width:80px; height:80px; border-radius:50%; background:linear-gradient(135deg,var(--accent2),var(--accent)); display:flex; align-items:center; justify-content:center; font-family:'DM Serif Display',serif; font-size:28px; color:white; flex-shrink:0; }
-  .founder-tag { font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent2); margin-bottom:12px; }
-  .founder-name { font-family:'DM Serif Display',serif; font-size:24px; color:var(--ink); margin-bottom:4px; }
-  .founder-role { font-size:13px; color:var(--muted); margin-bottom:16px; }
-  .founder-bio { font-size:15px; line-height:1.75; color:var(--muted); font-weight:300; }
-  .founder-bio strong { color:var(--ink); font-weight:500; }
-  .founder-bio em { font-style:italic; color:var(--accent); }
-  .founder-links { display:flex; gap:16px; margin-top:20px; }
-  .founder-link { font-size:13px; color:var(--accent); font-weight:500; text-decoration:none; border-bottom:1px solid rgba(45,106,79,0.3); padding-bottom:2px; transition:border-color 0.2s; }
-  .founder-link:hover { border-color:var(--accent); }
+  .founder {
+    position: relative; z-index: 1;
+    background: var(--forest);
+    color: #fff;
+    padding: 100px 24px;
+  }
+  .founder-inner { max-width: 720px; margin: 0 auto; text-align: center; }
+  .founder .eyebrow { color: var(--lime); }
+  .founder-headline {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .founder-headline em { font-style: italic; color: var(--lime); }
+  .founder-sub {
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: clamp(20px, 2.5vw, 28px);
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 40px;
+  }
+  .cred-stack {
+    display: flex; flex-direction: column; gap: 12px; max-width: 420px; margin: 0 auto 36px;
+  }
+  .cred {
+    border-radius: 14px;
+    padding: 18px 22px;
+    font-size: 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--lime);
+  }
+  .cred em { font-style: italic; }
+  .cred.highlight {
+    background: var(--lime);
+    color: var(--forest-deep);
+    border: none;
+    font-weight: 500;
+  }
+  .founder-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+  .founder-role { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+  .founder-links { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+  .founder-link {
+    font-size: 14px; font-weight: 500; color: var(--lime);
+    text-decoration: none; border-bottom: 1px solid rgba(200,239,106,0.35); padding-bottom: 2px;
+  }
+  .founder-link:hover { border-color: var(--lime); }
 
-  /* CTA BOTTOM */
-  .cta-bottom { position:relative; z-index:1; padding:100px 24px; text-align:center; }
-  .cta-bottom h2 { font-family:'DM Serif Display',serif; font-size:clamp(32px,4vw,52px); letter-spacing:-1px; margin-bottom:16px; }
-  .cta-bottom p { color:var(--muted); font-size:16px; margin-bottom:40px; }
-  .form-wrap-center { display:flex; gap:12px; max-width:480px; margin:0 auto; }
+  /* CTA */
+  .cta {
+    position: relative; z-index: 1;
+    padding: 100px 24px;
+    text-align: center;
+    background: var(--cream);
+  }
+  .cta h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+  .cta p { color: var(--muted); font-size: 16px; margin-bottom: 36px; }
+  .form-wrap-center {
+    display: flex; gap: 10px; max-width: 480px; margin: 0 auto;
+  }
+  .form-wrap-center input {
+    background: #fff; color: var(--ink);
+    border: 1.5px solid var(--border);
+  }
+  .form-wrap-center input::placeholder { color: #b0a99f; }
+  .cta .success-msg {
+    margin: 14px auto 0; max-width: 480px;
+    background: rgba(20,61,44,0.08); border-color: rgba(20,61,44,0.2); color: var(--forest);
+  }
+  .cta-tagline {
+    margin-top: 40px;
+    font-family: 'DM Serif Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--forest);
+  }
 
-  footer { position:relative; z-index:1; border-top:1px solid var(--border); padding:28px 48px; display:flex; align-items:center; justify-content:space-between; }
-  .footer-logo { font-family:'DM Serif Display',serif; font-size:18px; color:var(--accent); }
-  .footer-note { font-size:13px; color:var(--muted); }
+  footer {
+    position: relative; z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 28px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: var(--cream);
+  }
+  .footer-logo {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 18px; color: var(--forest); letter-spacing: -0.03em;
+  }
+  .footer-note { font-size: 13px; color: var(--muted); }
 
-  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(40px) scale(0.96); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
 
-  @media (max-width:680px) {
-    nav { padding:16px 20px; }
-    .form-wrap,.form-wrap-center,.name-form { flex-direction:column; }
-    footer { flex-direction:column; gap:8px; text-align:center; }
-    .diff-grid,.quotes-grid,.peace-feelings { grid-template-columns:1fr; }
-    .postmortem-inner { grid-template-columns:1fr; }
-    .pm-left { position:static; }
-    .trust-card,.founder-inner { flex-direction:column; text-align:center; }
-    .peace::after { font-size:240px; }
-    .feeling { border-right:none; border-bottom:1px solid var(--border); }
-    .feeling:last-child { border-bottom:none; }
-    .founder-links { justify-content:center; }
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-copy { padding: 120px 24px 40px; max-width: none; text-align: center; }
+    .hero-sub { margin-left: auto; margin-right: auto; }
+    .form-wrap { margin: 0 auto; flex-direction: column; }
+    .hero-visual { padding: 20px 24px 0; }
+    .hero-phone { width: min(280px, 70%); }
+    .problem-grid, .pillars, .mockup-grid, .why-pair, .fail-row { grid-template-columns: 1fr; }
+    .more-row { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 680px) {
+    nav { padding: 14px 18px; }
+    .more-row { grid-template-columns: 1fr; }
+    .form-wrap-center { flex-direction: column; }
+    footer { flex-direction: column; gap: 8px; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<div class="blob blob-1"></div>
-<div class="blob blob-2"></div>
-
 <nav>
-  <div class="logo">OkSpend</div>
-  <div class="nav-tag">Early Access · LAUNCHING JULY 2026</div>
+  <a href="#" class="logo">budg<span>e</span></a>
+  <div class="nav-tag">Launching July 2026</div>
 </nav>
 
 <!-- HERO -->
 <section class="hero" data-section="hero">
-  <div class="eyebrow"><span class="eyebrow-dot"></span>Now accepting early access signups</div>
-  <div class="for-tag">For <strong>young professionals</strong> who work hard, earn good money, and still feel uncertain every time they spend it</div>
-  <h1>$180 online order. Payday in four days. Should you?</h1>
-  <p class="subtitle">What if your smartest, most financially switched-on friend — someone who knows your priorities, your habits, and what you'd regret — could tell you honestly what they think before you buy something? That's exactly what OkSpend is.</p>
-
-  <div class="form-wrap" id="form-top">
-    <input type="email" id="email-top" placeholder="Your email address" />
-    <button class="btn" id="btn-top" onclick="handleSignup('top')">Join the waitlist</button>
-  </div>
-  <div class="success-msg" id="success-top"><span class="success-icon">✓</span>You're on the list — we'll be in touch before July.</div>
-  <div class="next-steps" id="next-steps-top"><strong>What happens next:</strong> We're running a small private beta starting July 2026. Waitlist members get first access and will be personally invited to try OkSpend before anyone else.</div>
-  <p class="privacy-note">No spam. No selling your data. Ever.</p>
-  <div class="count-wrap"><span id="counter">47</span> people already on the waitlist</div>
-</section>
-
-<!-- PAIN -->
-<div class="pain" data-section="pain">
-  <div class="pain-inner">
-    <blockquote>"I knew I could technically afford it.<br>I still felt <em>terrible</em> about it for a week."</blockquote>
-    <p class="pain-source">— Something most of us have said at least once</p>
-  </div>
-</div>
-
-<!-- SOCIAL PROOF -->
-<section class="quotes" data-section="social_proof">
-  <div class="quotes-label">What people we interviewed told us</div>
-  <div class="quotes-grid">
-    <div class="quote-card">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">I wish something like this existed. I spend so much time second-guessing purchases — even small ones. I just want someone to tell me it's okay, or not okay, with an actual reason.</p>
-      <div class="quote-person"><div class="quote-avatar">😊</div><div><div class="quote-name">Kiru</div><div class="quote-role">Graduate student, UD</div></div></div>
+  <div class="hero-copy">
+    <div class="hero-brand">budg<span>e</span></div>
+    <h1 class="hero-tagline">Makes Buying Hard Again.</h1>
+    <p class="hero-sub">A guard over Buy — reflection, friction, and a sixty-second pause — so impulse stops winning at checkout.</p>
+    <div class="form-wrap" id="form-top">
+      <input type="email" id="email-top" placeholder="Your email address" />
+      <button class="btn" id="btn-top" onclick="handleSignup('top')">Join the waitlist</button>
     </div>
-    <div class="quote-card">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">I use Excel to track everything but I still feel anxious before spending. It tells me what happened last month. What I actually need is help deciding right now, in the moment.</p>
-      <div class="quote-person"><div class="quote-avatar">🙂</div><div><div class="quote-name">Humphrey</div><div class="quote-role">Business Analytics student</div></div></div>
-    </div>
-    <div class="quote-card">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">I earn enough. I budget okay. But I still feel guilty after almost every purchase. I don't think that's a money problem — I think it's an information problem. I don't know if I made the right call.</p>
-      <div class="quote-person"><div class="quote-avatar">😌</div><div><div class="quote-name">Lulu</div><div class="quote-role">Working professional</div></div></div>
+    <div class="success-msg" id="success-top">✓ You're on the list — we'll be in touch before July.</div>
+    <p class="privacy-note">No spam. No selling your data. Ever.</p>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-phone">
+      <img src="budge-assets/mockup-nyc.png" alt="budge intervening on Amazon checkout about an NYC trip goal" />
     </div>
   </div>
 </section>
 
-<!-- SCENARIO -->
-<section class="scenario" data-section="scenario">
-  <div class="scenario-inner">
-    <div class="scenario-eyebrow">OkSpend in action</div>
-    <h2 class="scenario-headline">You're about to buy something. Before you do — what if you could ask a friend who knows your finances, your goals, and how you think about money? Someone who's seen enough of your decisions to know what you'd regret.</h2>
-    <div class="scenario-box">
-      <div class="scenario-step"><div class="scenario-num">1</div><div class="scenario-text">You're about to buy a <strong>$180 pair of shoes</strong>. You want them. You're not sure if you should. The uncertainty is there, like it always is.</div></div>
-      <div class="scenario-step"><div class="scenario-num">2</div><div class="scenario-text">You open OkSpend and type: <em>"Should I buy these shoes for $180?"</em> Ten seconds. That's it.</div></div>
-      <div class="scenario-step"><div class="scenario-num">3</div><div class="scenario-text">OkSpend knows your financial situation, your goals, and that you tend to regret purchases made when you're stressed. It checks everything automatically.</div></div>
-      <div class="scenario-step"><div class="scenario-num">4</div><div class="scenario-text">OkSpend responds: <em>"Not this week — your car insurance renews in four days and you're $60 from your monthly savings goal. Come back next month and this is a clear yes."</em></div></div>
+<!-- PROBLEM -->
+<section class="problem" data-section="problem">
+  <div class="problem-inner">
+    <div class="eyebrow">The problem</div>
+    <h2 class="problem-headline">Buying is <em>TOO</em> easy.</h2>
+    <div class="problem-grid">
+      <div class="henry">
+        <div>
+          <div class="henry-name">HENRY</div>
+          <p class="henry-desc">29. Earns well. Saves nothing.</p>
+        </div>
+        <p class="henry-def">H.E.N.R.Y: High Earner, Not Rich Yet.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">$3,500</div>
+          <p class="stat-label">a year, on purchases nobody planned</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num">75%</div>
+          <p class="stat-label">of millennials do this regularly</p>
+        </div>
+      </div>
     </div>
-    <div class="scenario-result">You put the shoes down. You feel <strong style="color:white;">relieved</strong>, not deprived. You know exactly when you can get them. No guilt. No regret. Just the right decision, made with confidence.</div>
+    <p class="cite">Capital One Shopping, 2026.</p>
   </div>
 </section>
 
-<!-- POSTMORTEM -->
-<section class="postmortem" data-section="postmortem">
-  <div class="postmortem-inner">
-    <div class="pm-left">
-      <div class="pm-eyebrow">The problem with every other app</div>
-      <h2 class="pm-headline">Every tool you have<br>tells you a story of<br><em>what already happened.</em></h2>
-      <p class="pm-sub">That's a postmortem. The patient has already died.<br><br>And what can you really do with that? You can feel bad about it. You can tell yourself you'll do better next time. But the money is already gone.<br><br>Prevention is better than cure. If something could be done — not always, but even some of the time, or most of the time — that small shift would create far more meaningful change in your life than any dashboard full of charts about last month.</p>
-    </div>
-    <div class="pm-right">
-      <div class="pm-card bad"><div class="pm-card-label">Every other app</div><div class="pm-card-title">You already spent it</div><div class="pm-card-body">You open the app. It tells you that you spent $340 on dining out last month. The money is gone. The regret is here. The chart is very detailed.</div></div>
-      <div class="pm-divider">↓</div>
-      <div class="pm-card bad"><div class="pm-card-label">What happens next</div><div class="pm-card-title">You feel bad, briefly</div><div class="pm-card-body">You promise yourself you'll be more careful. You close the app. A few days later, the uncertainty is back — exactly where it always was.</div></div>
-      <div class="pm-divider">↓</div>
-      <div class="pm-card good pm-prevention"><div class="pm-card-label">OkSpend</div><div class="pm-card-title">You ask before you spend</div><div class="pm-card-body">OkSpend works upstream — at the moment the decision is actually made. Not a postmortem. A conversation, right when it can still make a difference. Prevention, not regret.</div></div>
+<!-- WHY NOT SOLVED -->
+<section class="unsolved" data-section="unsolved">
+  <div class="unsolved-inner">
+    <div class="eyebrow">Why it is not solved</div>
+    <h2 class="unsolved-headline">Everything arrives <em>too late</em>, doesn't solve, or <em>costs a lot</em>.</h2>
+    <div class="fail-row">
+      <div class="fail-item">Budgeting Apps</div>
+      <div class="fail-item">Financial Advisors</div>
+      <div class="fail-item">Willpower</div>
     </div>
   </div>
 </section>
 
-<!-- DIFFERENTIATORS -->
-<section class="differentiators" data-section="differentiators">
-  <div class="diff-label">What makes OkSpend different</div>
-  <div class="diff-grid">
-    <div class="diff-card"><div class="diff-icon">🔮</div><div class="diff-title">Before the purchase</div><div class="diff-body">Every other app tells you what you already spent. OkSpend works upstream, where the decision actually happens.</div></div>
-    <div class="diff-card"><div class="diff-icon">🧬</div><div class="diff-title">Your psychology</div><div class="diff-body">OkSpend learns how you think about money — your patterns, your triggers, your relationship with spending.</div></div>
-    <div class="diff-card"><div class="diff-icon">🎯</div><div class="diff-title">Your goals, not rules</div><div class="diff-body">Advice tied to what you actually want from life — not generic budgeting rules that don't fit your situation.</div></div>
-  </div>
-  <div class="trust-card"><div class="trust-icon">💚</div><div class="trust-text"><h3>Built entirely for your good. Not ours.</h3><p>OkSpend will never sell your data, take referral fees, or recommend financial products. Our only job is to help you make the spending decision that's right for you.</p></div></div>
-</section>
-
-<!-- MISSION -->
-<section class="mission" data-section="mission">
-  <div class="mission-inner">
-    <div class="mission-eyebrow">Our mission</div>
-    <h2 class="mission-headline">It's time to democratise<br>financial intelligence — <em>for everyone.</em></h2>
-    <p class="mission-body">You put in the work. You earn the money. You deserve to feel <strong>good</strong> about how you spend it.<br><br>But for most people, spending still feels like guessing. Financial advice has always been reserved for people who already have wealth. Everyone else is left to figure it out alone — anxious, second-guessing, never quite sure if they made the right call.<br><br><strong>That's what OkSpend is here to change.</strong> We believe that the kind of intelligent, personalised financial guidance that used to cost thousands of dollars a year should be available to every single person.</p>
-    <div class="mission-pledge"><span class="mission-pledge-icon">🤝</span><span>We will <strong style="color:#fff;">never</strong> sell your data, misuse your information, or recommend financial products for our own gain. Our only goal is to help you feel more confident, more in control, and more at peace with your money — because you worked hard for it, and you deserve to enjoy it.</span></div>
-  </div>
-</section>
-
-<!-- PEACE OF MIND -->
-<section class="peace" data-section="peace_of_mind">
-  <div class="peace-inner">
-    <div class="peace-eyebrow">The power of validation</div>
-    <h2 class="peace-headline">Spend money and actually<br>feel <em>good</em> about it.</h2>
-    <div class="peace-feelings">
-      <div class="feeling"><div class="feeling-icon">🧘</div><div class="feeling-title">You are in control</div><div class="feeling-body">When you know someone has looked at your full picture and said "yes, this is fine" — that's not luck. That's you making an informed decision. The control was always yours.</div></div>
-      <div class="feeling"><div class="feeling-icon">💚</div><div class="feeling-title">Guilt-free spending</div><div class="feeling-body">Spending without guilt is not recklessness. It's the reward for being thoughtful. OkSpend earns you the right to enjoy what you buy — because you checked first.</div></div>
-      <div class="feeling"><div class="feeling-icon">🛡️</div><div class="feeling-title">Someone's got your back</div><div class="feeling-body">OkSpend is quietly watching the long game — your savings, your goals, your patterns — so you don't have to carry all of that in your head every time you open your wallet.</div></div>
+<!-- WHAT I AM BUILDING -->
+<section class="building" data-section="building">
+  <div class="building-inner">
+    <div class="eyebrow">What I am building</div>
+    <h2 class="building-headline">budge puts the <em>friction</em> back.</h2>
+    <p class="building-sub">Three moves research backs — right at the moment you're about to buy.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-title">Reflection</div>
+        <p class="pillar-body">A prompt that asks why you want it.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-title">Friction</div>
+        <p class="pillar-body">A guard over Buy. Clear it first.</p>
+      </div>
+      <div class="pillar featured">
+        <div class="pillar-title">Postponement</div>
+        <p class="pillar-body">Sixty seconds. The urge passes.</p>
+      </div>
     </div>
-    <div class="peace-statement"><p>Think about the last time someone validated you — told you that what you were doing was okay, that your decision made sense.<br><br>Even if you weren't looking for it, it felt good. It made you <em>calmer</em>. More confident. More at peace.<br><br>That feeling — that quiet relief — is exactly what OkSpend gives you, every time you spend.</p></div>
-    <p class="peace-closing">Most people carry a low-level anxiety about money <strong>all the time.</strong> Not because they're bad with money. Not because they don't earn enough. But because no one has ever told them, in the moment, that they're doing okay.<br><br>OkSpend does that. And that small shift — from anxiety to confidence — turns out to make an <strong>enormous difference</strong> in how you feel about your life.</p>
+    <div class="more-label">And more we can turn on</div>
+    <div class="more-row">
+      <div class="more-item"><div class="more-title">Show the Trade</div><div class="more-body">Not $400 spent. 40% of your trip.</div></div>
+      <div class="more-item"><div class="more-title">Name the Trick</div><div class="more-body">That timer resets on reload.</div></div>
+      <div class="more-item"><div class="more-title">Your own History</div><div class="more-body">You rated the last one 2 out of 5.</div></div>
+      <div class="more-item"><div class="more-title">Park it</div><div class="more-body">Move it to a list. Most die there.</div></div>
+      <div class="more-item"><div class="more-title">A Second Signature</div><div class="more-body">Big buys need a friend to approve.</div></div>
+    </div>
+    <p class="research-note">Postponement, reflection and friction each significantly reduce purchase impulsivity. Sun et al., Behavioural Public Policy, Cambridge, 2025.</p>
   </div>
 </section>
 
-<!-- FOUNDER BIO -->
+<!-- MOCKUPS -->
+<section class="mockups" data-section="mockups">
+  <div class="mockups-inner">
+    <div class="eyebrow">In the moment</div>
+    <h2 class="mockups-headline">What budge feels like<br>at checkout</h2>
+    <p class="mockups-sub">Not a dashboard. Not a lecture after the fact. A pause — right before Place your order.</p>
+    <div class="mockup-grid">
+      <div class="mockup-card">
+        <div class="mockup-frame"><img src="budge-assets/mockup-why.png" alt="budge asking why you want this purchase" /></div>
+        <div class="mockup-label">Reflection</div>
+        <p class="mockup-desc">Type why you want it. Most impulses don't survive the sentence.</p>
+      </div>
+      <div class="mockup-card">
+        <div class="mockup-frame"><img src="budge-assets/mockup-nyc.png" alt="budge showing purchase impact on NYC trip goal" /></div>
+        <div class="mockup-label">Show the Trade</div>
+        <p class="mockup-desc">$20.48 stops looking small when it's 30% of your trip.</p>
+      </div>
+      <div class="mockup-card">
+        <div class="mockup-frame"><img src="budge-assets/mockup-bff.png" alt="budge asking for a second signature from a friend" /></div>
+        <div class="mockup-label">Second Signature</div>
+        <p class="mockup-desc">Big buys need a friend to approve — or you walk away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT WORKS -->
+<section class="why-works" data-section="why_works">
+  <div class="why-works-inner">
+    <div class="eyebrow">Why it works</div>
+    <h2 class="why-headline">It is built on</h2>
+    <ul class="why-list">
+      <li>Psychology<span>How you actually decide under urge — not how budgets pretend you decide.</span></li>
+      <li>Intervention in the moment<span>A guard over Buy, before the money is gone.</span></li>
+      <li>Rewards for listening<span>You keep the joy of buying — when it still fits your life.</span></li>
+    </ul>
+    <div class="why-pair">
+      <div class="why-box light">I add friction back, that retailers removed.</div>
+      <div class="why-box dark">I do not take the joy away — I replace it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
 <section class="founder" data-section="founder">
   <div class="founder-inner">
-    <div class="founder-avatar">R</div>
-    <div class="founder-content">
-      <div class="founder-tag">Who built this</div>
-      <div class="founder-name">Rahul Chauhan</div>
-      <div class="founder-role">MS Business Analytics, University of Delaware · MA Psychology · Venture Fellow, VentureOn Incubator</div>
-      <p class="founder-bio">I built OkSpend because I was that person — earning enough, tracking my spending, and still feeling anxious every time I bought something.<br><br>Every budgeting app I tried told me the same thing: <em>here's what you already spent.</em> What I actually needed was help in the moment — before the decision, not after. No tool existed for that.<br><br>My background is unusual for a fintech founder. I have a degree in <strong>psychology</strong> and one in <strong>business analytics</strong>, and I've spent years studying exactly why people make the financial decisions they do — and why knowing the numbers rarely changes the behavior. OkSpend is built on that intersection.<br><br>I'm currently in active customer discovery — talking to real people before writing a single line of product code. <em>If you've ever felt the way I described, I'd love to hear from you.</em></p>
-      <div class="founder-links">
-        <a href="https://www.linkedin.com/in/rahul-chauhan-rc11/" target="_blank" class="founder-link">LinkedIn →</a>
-        <a href="https://github.com/rahulchauhan0011" target="_blank" class="founder-link">GitHub →</a>
-        <a href="mailto:rahulrc@udel.edu" class="founder-link">Email me →</a>
-      </div>
-      <p class="founder-bio" style="margin-top:18px;">If this resonates with you, I'd love to hear your story — feel free to reach out.</p>
+    <div class="eyebrow">Why me</div>
+    <h2 class="founder-headline">This is a <em>behaviour</em> problem.</h2>
+    <p class="founder-sub">I trained in both halves of it.</p>
+    <div class="cred-stack">
+      <div class="cred">Masters in <em>Psychology</em></div>
+      <div class="cred">Masters in <em>Business Analytics</em></div>
+      <div class="cred highlight">I am the <em>Customer</em></div>
+    </div>
+    <div class="founder-name">Rahul Chauhan</div>
+    <p class="founder-role">University of Delaware · Venture Fellow, VentureOn Incubator</p>
+    <div class="founder-links">
+      <a href="https://www.linkedin.com/in/rahul-chauhan-rc11/" target="_blank" class="founder-link">LinkedIn →</a>
+      <a href="https://github.com/rahulchauhan0011" target="_blank" class="founder-link">GitHub →</a>
+      <a href="mailto:rahulrc@udel.edu" class="founder-link">Email me →</a>
     </div>
   </div>
 </section>
 
-<!-- CTA BOTTOM -->
-<section class="cta-bottom" data-section="cta_bottom">
-  <h2>Stop second-guessing.<br>Start spending with clarity.</h2>
-  <p>Be among the first to try OkSpend when it launches in July 2026.</p>
+<!-- CTA -->
+<section class="cta" data-section="cta_bottom">
+  <h2>Budge before you splurge.</h2>
+  <p>Be among the first when we launch in July 2026.</p>
   <div class="form-wrap-center" id="form-bottom">
     <input type="email" id="email-bottom" placeholder="Your email address" />
-    <button class="btn" id="btn-bottom" onclick="handleSignup('bottom')">Join the waitlist</button>
+    <button class="btn btn-dark" id="btn-bottom" onclick="handleSignup('bottom')">Join the waitlist</button>
   </div>
-  <div class="success-msg" id="success-bottom" style="margin:16px auto 0;max-width:480px;"><span class="success-icon">✓</span>You're on the list — we'll be in touch before July.</div>
-</section>
-
-<!-- NAME SUGGESTION -->
-<section class="name-suggestion" data-section="name_suggestion">
-  <div class="name-suggestion-inner">
-    <div class="name-eyebrow">HELP US DECIDE</div>
-    <h2 class="name-title">What should we call this?</h2>
-    <div class="name-quote"><p>"The person who names this wins a piece of it."</p></div>
-    <p class="name-body">We're still deciding on the final name. And honestly — you understand what this product means better than we do. If a name comes to mind that captures the feeling of finally having someone in your corner before a purchase, we genuinely want to hear it. The best suggestion gets a lifetime free subscription when we launch.</p>
-    <form class="name-form" id="name-form" onsubmit="handleNameSuggestion(event)">
-      <input type="text" id="name-suggestion-input" placeholder="Your name suggestion" />
-      <input type="email" id="name-email-input" placeholder="Your email address" />
-      <button class="btn" type="submit">Submit my suggestion</button>
-    </form>
-    <div class="success-msg" id="name-success" style="margin-top:14px;">✓ Got it — thank you. We'll be in touch if yours wins.</div>
-  </div>
+  <div class="success-msg" id="success-bottom">✓ You're on the list — we'll be in touch before July.</div>
+  <p class="cta-tagline">budge &gt; Before You Splurge.</p>
 </section>
 
 <footer>
-  <div class="footer-logo">OkSpend</div>
-  <p class="footer-note">© 2026 OkSpend · Early stage</p>
+  <div class="footer-logo">budge</div>
+  <p class="footer-note">© 2026 budge · Early stage</p>
 </footer>
 
 <script>
-// ═══════════════════════════════════════════════
-// ANALYTICS — HOW IT WORKS (explained in comments)
-// ═══════════════════════════════════════════════
-
-// WHAT IS TRACKED AND WHY:
-// 1. WHERE people come from (utm_source) — so you know if LinkedIn, Reddit, etc. works best
-// 2. HOW FAR they scroll — so you know which sections they actually read
-// 3. HOW LONG they stay — so you know if people are engaged or bouncing
-// 4. WHICH SECTIONS they reach — so you know your most-read content
-// 5. SIGNUPS — the most important metric, tracked with full source info
-
-// ── 1. Read UTM parameters from URL ──
-// When you share the link, add ?utm_source=linkedin to the end
-// Example: https://rahulchauhan0011.github.io/okspend/?utm_source=linkedin&utm_medium=post&utm_campaign=april_launch
-// This tells you exactly which platform each signup came from
 function getUTM() {
   const p = new URLSearchParams(window.location.search);
   return {
@@ -445,7 +762,6 @@ function getUTM() {
 }
 const utm = getUTM();
 
-// Send the same custom events to Google Analytics (gtag) and PostHog
 function analyticsEvent(name, params) {
   const p = params || {};
   try { gtag('event', name, p); } catch (e) {}
@@ -456,13 +772,8 @@ function analyticsEvent(name, params) {
   } catch (e) {}
 }
 
-// Fire an event on page load with traffic source
 analyticsEvent('page_view_with_source', { traffic_source: utm.source, traffic_medium: utm.medium, traffic_campaign: utm.campaign });
 
-// ── 2. Scroll depth tracking ──
-// Tells you: do people read 25% of the page? 50%? 90%?
-// If most people stop at 25%, your opening isn't compelling enough
-// If most reach 90%, your page is working — they're reading everything
 const scrollDone = {};
 window.addEventListener('scroll', () => {
   const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -474,16 +785,10 @@ window.addEventListener('scroll', () => {
   });
 }, { passive: true });
 
-// ── 3. Time on page ──
-// Tells you: do people spend real time reading, or do they bounce in 5 seconds?
-// 30 seconds = they read a bit. 120 seconds = they read seriously. 300 seconds = highly engaged.
 [30, 60, 120, 300].forEach(s => {
   setTimeout(() => analyticsEvent('time_on_page', { seconds: s, traffic_source: utm.source }), s * 1000);
 });
 
-// ── 4. Section view tracking ──
-// Each section has data-section="name" — when it enters the screen, we track it
-// This tells you exactly which parts of the page people actually see
 const secObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting && e.target.dataset.section) {
@@ -494,17 +799,6 @@ const secObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 document.querySelectorAll('[data-section]').forEach(el => secObs.observe(el));
 
-// ── 5. Counter ──
-let count = 47;
-setInterval(() => {
-  if (Math.random() > 0.7) {
-    count++;
-    const el = document.getElementById('counter');
-    if (el) el.textContent = count;
-  }
-}, 8000);
-
-// ── 6. Signup handler with full analytics ──
 async function handleSignup(position) {
   const emailInput = document.getElementById('email-' + position);
   const email = emailInput.value.trim();
@@ -518,9 +812,7 @@ async function handleSignup(position) {
     return;
   }
 
-  // Track click with valid email — someone is trying to sign up
   analyticsEvent('signup_attempt', { position, traffic_source: utm.source, traffic_medium: utm.medium, traffic_campaign: utm.campaign });
-
   btn.textContent = 'Joining...';
   btn.disabled = true;
 
@@ -528,87 +820,30 @@ async function handleSignup(position) {
     const res = await fetch('https://formspree.io/f/xaqlerqr', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ email, source: 'okspend-' + position, utm_source: utm.source, utm_medium: utm.medium, utm_campaign: utm.campaign })
+      body: JSON.stringify({ email, source: 'budge-' + position, utm_source: utm.source, utm_medium: utm.medium, utm_campaign: utm.campaign })
     });
 
     if (res.ok) {
-      count++;
-      const counter = document.getElementById('counter');
-      if (counter) counter.textContent = count;
       document.getElementById('form-' + position).style.display = 'none';
-      const ns = document.getElementById('next-steps-' + position);
-      if (ns) ns.style.display = 'none';
       document.getElementById('success-' + position).style.display = 'flex';
-
-      // THIS IS YOUR PRIMARY METRIC — a successful email signup
       analyticsEvent('sign_up', { method: 'email', position, traffic_source: utm.source, traffic_medium: utm.medium, traffic_campaign: utm.campaign });
-
     } else {
       btn.textContent = 'Join the waitlist'; btn.disabled = false;
       emailInput.style.borderColor = '#e57373';
       analyticsEvent('signup_failed', { reason: 'server_error', position, traffic_source: utm.source });
     }
-  } catch(err) {
+  } catch (err) {
     btn.textContent = 'Join the waitlist'; btn.disabled = false;
     emailInput.style.borderColor = '#e57373';
     analyticsEvent('signup_failed', { reason: 'network_error', position, traffic_source: utm.source });
   }
 }
 
-async function handleNameSuggestion(event) {
-  event.preventDefault();
-  const suggestionInput = document.getElementById('name-suggestion-input');
-  const emailInput = document.getElementById('name-email-input');
-  const form = document.getElementById('name-form');
-  const success = document.getElementById('name-success');
-  const btn = form ? form.querySelector('button[type="submit"]') : null;
-  const suggestion = suggestionInput.value.trim();
-  const email = emailInput.value.trim();
-
-  if (!suggestion || !email || !email.includes('@')) {
-    if (suggestionInput) suggestionInput.style.borderColor = '#e57373';
-    if (emailInput) emailInput.style.borderColor = '#e57373';
-    setTimeout(() => {
-      if (suggestionInput) suggestionInput.style.borderColor = '';
-      if (emailInput) emailInput.style.borderColor = '';
-    }, 1500);
-    return;
-  }
-
-  if (btn) {
-    btn.disabled = true;
-    btn.textContent = 'Submitting...';
-  }
-
-  try {
-    const res = await fetch('https://formspree.io/f/xaqlerqr', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({ suggestion, email })
-    });
-
-    if (res.ok) {
-      if (form) form.style.display = 'none';
-      if (success) success.style.display = 'flex';
-    } else {
-      if (suggestionInput) suggestionInput.style.borderColor = '#e57373';
-      if (emailInput) emailInput.style.borderColor = '#e57373';
-      if (btn) { btn.disabled = false; btn.textContent = 'Submit my suggestion'; }
-    }
-  } catch (err) {
-    if (suggestionInput) suggestionInput.style.borderColor = '#e57373';
-    if (emailInput) emailInput.style.borderColor = '#e57373';
-    if (btn) { btn.disabled = false; btn.textContent = 'Submit my suggestion'; }
-  }
-}
-
-// Enter key on email inputs
 document.querySelectorAll('input[type=email]').forEach(input => {
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') handleSignup(input.id.split('-')[1]);
   });
 });
-
 </script>
 
 </body>
